@@ -1,3 +1,118 @@
-h1{
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* font */
+
+h1{font-size: 40px}
+h2{font-size: 30px}
+h3{font-size: 20px}
+h4{font-size: 10px}
+
+.simbolo{font-size: 22px;}
+.nome{font-size: 14px;}
+.numero{font-size: 18px;}
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: gray;
+    color: white;
+    /* position: fixed; DA SISTEMARE */
+}
+
+header h1, header h3{
+    padding: 4px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+/* NAVBAR */
+
+/* MAIN */
+
+/* dimensione */
+
+main{
+    width: 10000px;
+}
+
+main div span{
+    display: block;
+}
+
+
+
+main div{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+/* colori */
+
+.metalli_alcalini{background-color: rgb(202,107,24)}
+.metalli_alcalino_terrosi{background-color: rgb(255,237,188)}
+.metalli_del_blocco_d{background-color: rgb(225,202,200)}
+.metalli_del_blocco_p{background-color: rgb(125,147,58)}
+.lantanidi{background-color: rgb(232,181,33)}
+.attinidi{background-color: rgb(139,162,174)}
+.semimetalli{background-color: rgb(144,170,36)}
+.non_metalli{background-color: rgb(173,178,147)}
+.alogeni{background-color: rgb(188,184,145)}
+.gas_nobili{background-color: rgb(173,204,220)}
+.altro{background-color: rgb(229,229,229)}
+
+/* posizionamento */
+
+/* .gruppo1{position: relative; float: left;}
+.gruppo2{position: relative; float: left;}
+.gruppo3{position: relative; float: left;}
+.gruppo4{position: relative; float: left;}
+.gruppo5{position: relative; float: left;}
+.gruppo6{position: relative; float: left;}
+.gruppo7{position: relative; float: left;}
+.gruppo9{position: relative; float: left;}
+.gruppo10{position: relative; float: left;}
+.gruppo11{position: relative; float: left;}
+.gruppo12{position: relative; float: left;}
+.gruppo13{position: relative; float: right;}
+.gruppo14{position: relative; float: right;}
+.gruppo15{position: relative; float: right;}
+.gruppo16{position: relative; float: right;}
+.gruppo17{position: relative; float: right;}
+.gruppo18{position: relative; float: right;} */
+
+.periodo1{position: relative; top: 0px;}
+.periodo2{position: relative; top: 60px;}
+.periodo3{position: relative; top: 120px;}
+.periodo4{position: relative; top: 180px;}
+.periodo5{position: relative; top: 240px;}
+.periodo6{position: relative; top: 300px;}
+.periodo7{position: relative; top: 360px;}
+.lantanidi{position: relative; top: 420px;}
+.attinidi{position: relative; top: 480px;}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+
+    position: fixed;
+    bottom: 0;
+}
+
+footer h3, footer h4{
+    display: inline-block;
 }
