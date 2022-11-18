@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
 }
 
 /* font */
@@ -14,9 +13,7 @@ h2{font-size: 30px}
 h3{font-size: 20px}
 h4{font-size: 10px}
 
-.simbolo{font-size: 22px;}
-.nome{font-size: 14px;}
-.numero{font-size: 18px;}
+*{font-family: 'Ubuntu', sans-serif;}
 
 /* HEADER */
 
@@ -24,90 +21,169 @@ header{
     width: 100%;
     height: 60px;
     background-color: gray;
-    color: white;
-    /* position: fixed; DA SISTEMARE */
+    z-index: 1;
+
+    position: sticky;
+    top: 0px;
 }
 
 header h1, header h3{
     padding: 4px;
     margin-left: 30px;
+    color: white;
     display: inline-block;
 }
 
 /* NAVBAR */
 
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: lightgray;
+    z-index: 1;
+
+    position: sticky;
+    top: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav>ul>li{
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: darkgray;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+nav li:hover{
+    background-color: gray;
+}
+
+.dropdown{
+    display: block;
+    padding: 10px;
+    margin: 0 10px;
+
+    position: absolute;
+}
+
+/* nav a{
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    border: 1.5px solid black;
+} */
+
+/* animazioni */
+
+nav .metalli_alcalini:hover,
+nav .metalli_alcalino_terrosi:hover,
+nav .metalli_del_blocco_d:hover,
+nav .metalli_del_blocco_p:hover,
+nav .lantanidi:hover,
+nav .attinidi:hover,
+nav .semimetalli:hover,
+nav .non_metalli:hover,
+nav .alogeni:hover,
+nav .gas_nobili:hover,
+nav .altro:hover{
+    /* border: 5px solid yellow; */
+}
+
 /* MAIN */
 
-/* dimensione */
-
 main{
-    width: 10000px;
+    width: calc(56px*18);
+    height: calc(56*9);
+
+    z-index: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+main div{
+    width: 54px;
+    height: 54px;
+
+    margin: 1px;
+
+    position: relative;
 }
 
 main div span{
-    display: block;
+    padding: 2px;
 }
 
+.simbolo{
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+.nome{
+    position: absolute;
+    bottom: 0;
+    font-size: 8px;
+}
+.numero{
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+}
 
+/* animazioni */
 
-main div{
-    display: inline-block;
-    width: 60px;
-    height: 60px;
+main .metalli_alcalini:hover,
+main .metalli_alcalino_terrosi:hover,
+main .metalli_del_blocco_d:hover,
+main .metalli_del_blocco_p:hover,
+main .lantanidi:hover,
+main .attinidi:hover,
+main .semimetalli:hover,
+main .non_metalli:hover,
+main .alogeni:hover,
+main .gas_nobili:hover,
+main .altro:hover{
+    border: 5px solid yellow;
 }
 
 /* colori */
 
-.metalli_alcalini{background-color: rgb(202,107,24)}
-.metalli_alcalino_terrosi{background-color: rgb(255,237,188)}
-.metalli_del_blocco_d{background-color: rgb(225,202,200)}
-.metalli_del_blocco_p{background-color: rgb(125,147,58)}
-.lantanidi{background-color: rgb(232,181,33)}
-.attinidi{background-color: rgb(139,162,174)}
-.semimetalli{background-color: rgb(144,170,36)}
-.non_metalli{background-color: rgb(173,178,147)}
-.alogeni{background-color: rgb(188,184,145)}
-.gas_nobili{background-color: rgb(173,204,220)}
-.altro{background-color: rgb(229,229,229)}
-
-/* posizionamento */
-
-/* .gruppo1{position: relative; float: left;}
-.gruppo2{position: relative; float: left;}
-.gruppo3{position: relative; float: left;}
-.gruppo4{position: relative; float: left;}
-.gruppo5{position: relative; float: left;}
-.gruppo6{position: relative; float: left;}
-.gruppo7{position: relative; float: left;}
-.gruppo9{position: relative; float: left;}
-.gruppo10{position: relative; float: left;}
-.gruppo11{position: relative; float: left;}
-.gruppo12{position: relative; float: left;}
-.gruppo13{position: relative; float: right;}
-.gruppo14{position: relative; float: right;}
-.gruppo15{position: relative; float: right;}
-.gruppo16{position: relative; float: right;}
-.gruppo17{position: relative; float: right;}
-.gruppo18{position: relative; float: right;} */
-
-.periodo1{position: relative; top: 0px;}
-.periodo2{position: relative; top: 60px;}
-.periodo3{position: relative; top: 120px;}
-.periodo4{position: relative; top: 180px;}
-.periodo5{position: relative; top: 240px;}
-.periodo6{position: relative; top: 300px;}
-.periodo7{position: relative; top: 360px;}
-.lantanidi{position: relative; top: 420px;}
-.attinidi{position: relative; top: 480px;}
+main .metalli_alcalini{background-color: rgb(202,107,24)}
+main .metalli_alcalino_terrosi{background-color: rgb(255,237,188)}
+main .metalli_del_blocco_d{background-color: rgb(225,202,200)}
+main .metalli_del_blocco_p{background-color: rgb(125,147,58)}
+main .lantanidi{background-color: rgb(232,181,33)}
+main .attinidi{background-color: rgb(139,162,174)}
+main .semimetalli{background-color: rgb(144,170,36)}
+main .non_metalli{background-color: rgb(173,178,147)}
+main .alogeni{background-color: rgb(188,184,145)}
+main .gas_nobili{background-color: rgb(173,204,220)}
+main .altro{background-color: rgb(229,229,229)}
 
 /* FOOTER */
 
 footer{
     width: 100%;
     height: 30px;
+
     background-color: gray;
     color: white;
+
     text-align: center;
+
+    z-index: 1;
 
     position: fixed;
     bottom: 0;
