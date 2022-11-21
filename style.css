@@ -50,60 +50,56 @@ nav{
     justify-content: space-around;
 }
 
+/* menù */
+
 nav ul{
     list-style-type: none;
 }
 
-nav>ul>li{
+nav .dropdown-title{
     display: inline-block;
+    background-color: darkgray;
+
     padding: 10px;
     margin: 0 10px;
-    background-color: darkgray;
+
     border-radius: 5px;
     border: 1.5px solid black;
+
+    position: relative;
 }
 
-nav li:hover{
+nav .dropdown-title:hover{
     background-color: gray;
 }
 
-.dropdown{
-    display: block;
-    padding: 10px;
-    margin: 0 10px;
+nav .dropdown-title:hover + .dropdown-content{
+    visibility: visible;
+}
+nav .dropdown-content:hover{
+    visibility: visible;
+}
+
+nav .dropdown-content{
+    visibility: hidden;
 
     position: absolute;
 }
 
-/* nav a{
+nav .dropdown-content li{
     padding: 5px;
+    margin: 0 10px;
+
+    background-color: white;
     border-radius: 5px;
-    text-decoration: none;
-    color: black;
-    border: 1.5px solid black;
-} */
-
-/* animazioni */
-
-nav .metalli_alcalini:hover,
-nav .metalli_alcalino_terrosi:hover,
-nav .metalli_del_blocco_d:hover,
-nav .metalli_del_blocco_p:hover,
-nav .lantanidi:hover,
-nav .attinidi:hover,
-nav .semimetalli:hover,
-nav .non_metalli:hover,
-nav .alogeni:hover,
-nav .gas_nobili:hover,
-nav .altro:hover{
-    /* border: 5px solid yellow; */
+    border: 0.5px solid black;
 }
 
 /* MAIN */
 
 main{
     width: calc(56px*18);
-    height: calc(56*9);
+    /* height: calc(56*9) */
 
     z-index: 2;
 
@@ -142,22 +138,6 @@ main div span{
     font-size: 14px;
 }
 
-/* animazioni */
-
-main .metalli_alcalini:hover,
-main .metalli_alcalino_terrosi:hover,
-main .metalli_del_blocco_d:hover,
-main .metalli_del_blocco_p:hover,
-main .lantanidi:hover,
-main .attinidi:hover,
-main .semimetalli:hover,
-main .non_metalli:hover,
-main .alogeni:hover,
-main .gas_nobili:hover,
-main .altro:hover{
-    border: 5px solid yellow;
-}
-
 /* colori */
 
 main .metalli_alcalini{background-color: rgb(202,107,24)}
@@ -191,4 +171,81 @@ footer{
 
 footer h3, footer h4{
     display: inline-block;
+}
+
+/* ANIMAZIONI */
+
+main .metalli_alcalini:hover,
+main .metalli_alcalino_terrosi:hover,
+main .metalli_del_blocco_d:hover,
+main .metalli_del_blocco_p:hover,
+main .lantanidi:hover,
+main .attinidi:hover,
+main .semimetalli:hover,
+main .non_metalli:hover,
+main .alogeni:hover,
+main .gas_nobili:hover,
+main .altro:hover{
+    border: 5px solid yellow;
+}
+
+main .metalli_alcalini:hover main .metalli_alcalini,
+main .metalli_alcalino_terrosi:hover main .metalli_alcalino_terrosi,
+main .metalli_del_blocco_d:hover main .metalli_del_blocco_d,
+main .metalli_del_blocco_p:hover main .metalli_del_blocco_p,
+main .lantanidi:hover main .lantanidi,
+main .attinidi:hover main .attinidi,
+main .semimetalli:hover main .semimetalli,
+main .non_metalli:hover main .non_metalli,
+main .alogeni:hover main .alogeni,
+main .gas_nobili:hover main .gas_nobili,
+main .altro:hover main .altro{
+    border: 5px solid blue;
+}
+
+nav .metalli_alcalini:hover main .metalli_alcalini,
+nav .metalli_alcalino_terrosi:hover main .metalli_alcalino_terrosi,
+nav .metalli_del_blocco_d:hover main .metalli_del_blocco_d,
+nav .metalli_del_blocco_p:hover main .metalli_del_blocco_p,
+nav .lantanidi:hover main .lantanidi,
+nav .attinidi:hover main .attinidi,
+nav .semimetalli:hover main .semimetalli,
+nav .non_metalli:hover main .non_metalli,
+nav .alogeni:hover main .alogeni,
+nav .gas_nobili:hover main .gas_nobili,
+nav .altro:hover main .altro{
+    border: 5px solid gray;
+}
+
+nav .gruppo1:hover main .gruppo1,
+nav .gruppo2:hover main .gruppo2,
+nav .gruppo3:hover main .gruppo3,
+nav .gruppo4:hover main .gruppo4,
+nav .gruppo5:hover main .gruppo5,
+nav .gruppo6:hover main .gruppo6,
+nav .gruppo7:hover main .gruppo7,
+nav .gruppo8:hover main .gruppo8,
+nav .gruppo9:hover main .gruppo9,
+nav .gruppo10:hover main .gruppo10,
+nav .gruppo11:hover main .gruppo11,
+nav .gruppo12:hover main .gruppo12,
+nav .gruppo13:hover main .gruppo13,
+nav .gruppo14:hover main .gruppo14,
+nav .gruppo15:hover main .gruppo15,
+nav .gruppo16:hover main .gruppo16,
+nav .gruppo17:hover main .gruppo17,
+nav .gruppo18:hover main .gruppo18{
+    background-color: gray;
+}
+
+nav .periodo1:hover main .periodo1,
+nav .periodo2:hover main .periodo2,
+nav .periodo3:hover main .periodo3,
+nav .periodo4:hover main .periodo4,
+nav .periodo5:hover main .periodo5,
+nav .periodo6:hover main .periodo6,
+nav .periodo7:hover main .periodo7,
+nav .lantanidi:hover main .lantanidi,
+nav .attinidi:hover main .attinidi{
+    background-color: gray;
 }
