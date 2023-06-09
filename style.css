@@ -15,93 +15,99 @@ h4{font-size: 10px}
 
 *{font-family: 'Ubuntu', sans-serif;}
 
-/* HEADER */
-
-header{
-    width: 100%;
-    height: 60px;
-    background-color: gray;
-    z-index: 1;
-
-    position: sticky;
-    top: 0px;
-}
-
-header h1, header h3{
-    padding: 4px;
-    margin-left: 30px;
-    color: white;
-    display: inline-block;
-}
-
 /* NAVBAR */
 
 nav{
     width: 100%;
     height: 60px;
-    background-color: lightgray;
-    z-index: 1;
-
-    position: sticky;
-    top: 60px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    background-color: black;
 }
 
-/* menù */
+nav #titolo, nav #classe{
+    color: white;
+    width: 20%;
+}
 
 nav ul{
-    list-style-type: none;
+    list-style: none;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav .dropdown-title{
-    display: inline-block;
-    background-color: darkgray;
-
-    padding: 10px;
-    margin: 0 10px;
-
-    border-radius: 5px;
-    border: 1.5px solid black;
-
-    position: relative;
-}
-
-nav .dropdown-title:hover{
-    background-color: gray;
-}
-
-nav .dropdown-title:hover + .dropdown-content{
-    visibility: visible;
-}
-nav .dropdown-content:hover{
-    visibility: visible;
-}
-
-nav .dropdown-content{
-    visibility: hidden;
+nav ul ul{
+    display: none;
+    
+    z-index: 10;
 
     position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 }
 
-nav .dropdown-content li{
-    padding: 5px;
-    margin: 0 10px;
+nav ul li{
+    position: relative;
+    float: left;
+    width: 10%;
+    text-align: center;
+}
 
-    background-color: white;
-    border-radius: 5px;
-    border: 0.5px solid black;
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li li{
+    position: relative;
+    float: none;
+    width: 100%;
+    border: none;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border-right: solid 2px #000;
+    border-left: solid 2px #000;
+}
+
+nav ul ul li a{
+    font-size: 1rem;
+    border-bottom: solid 2px #000;
+}
+
+nav ul ul li:first-child a{
+    border-top: solid 2px #000;
+}
+
+nav ul li:hover a{
+    background: #FFF;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav ul li li:hover a{
+    background: #000;
+    color: #FFF;
 }
 
 /* MAIN */
 
 main{
-    width: calc(56px*18);
-    /* height: calc(56*9) */
-
+    width: 80%;
     z-index: 2;
+
+    margin: 0 auto;
+
+    position: absolute;
+    top: 10%;
+    left: 10%;
 
     display: flex;
     flex-wrap: wrap;
@@ -110,32 +116,34 @@ main{
 }
 
 main div{
-    width: 54px;
-    height: 54px;
+    width: 5%;
+    aspect-ratio: 1/1;
 
-    margin: 1px;
+    margin: 2px;
 
     position: relative;
 }
 
-main div span{
+main span{
     padding: 2px;
 }
 
-.simbolo{
+main .simbolo{
     position: absolute;
     left: 0;
-    font-size: 20px;
+    font-size: 140%;
 }
-.nome{
+
+main .nome{
     position: absolute;
     bottom: 0;
-    font-size: 8px;
+    font-size: 80%;
 }
-.numero{
+
+main .numero{
     position: absolute;
     right: 0;
-    font-size: 14px;
+    font-size: 140%;
 }
 
 /* colori */
@@ -159,7 +167,7 @@ footer{
     height: 30px;
 
     background-color: gray;
-    color: white;
+    color: rgb(255, 255, 255);
 
     text-align: center;
 
@@ -187,65 +195,5 @@ main .alogeni:hover,
 main .gas_nobili:hover,
 main .altro:hover{
     border: 5px solid yellow;
-}
-
-main .metalli_alcalini:hover main .metalli_alcalini,
-main .metalli_alcalino_terrosi:hover main .metalli_alcalino_terrosi,
-main .metalli_del_blocco_d:hover main .metalli_del_blocco_d,
-main .metalli_del_blocco_p:hover main .metalli_del_blocco_p,
-main .lantanidi:hover main .lantanidi,
-main .attinidi:hover main .attinidi,
-main .semimetalli:hover main .semimetalli,
-main .non_metalli:hover main .non_metalli,
-main .alogeni:hover main .alogeni,
-main .gas_nobili:hover main .gas_nobili,
-main .altro:hover main .altro{
-    border: 5px solid blue;
-}
-
-nav .metalli_alcalini:hover main .metalli_alcalini,
-nav .metalli_alcalino_terrosi:hover main .metalli_alcalino_terrosi,
-nav .metalli_del_blocco_d:hover main .metalli_del_blocco_d,
-nav .metalli_del_blocco_p:hover main .metalli_del_blocco_p,
-nav .lantanidi:hover main .lantanidi,
-nav .attinidi:hover main .attinidi,
-nav .semimetalli:hover main .semimetalli,
-nav .non_metalli:hover main .non_metalli,
-nav .alogeni:hover main .alogeni,
-nav .gas_nobili:hover main .gas_nobili,
-nav .altro:hover main .altro{
-    border: 5px solid gray;
-}
-
-nav .gruppo1:hover main .gruppo1,
-nav .gruppo2:hover main .gruppo2,
-nav .gruppo3:hover main .gruppo3,
-nav .gruppo4:hover main .gruppo4,
-nav .gruppo5:hover main .gruppo5,
-nav .gruppo6:hover main .gruppo6,
-nav .gruppo7:hover main .gruppo7,
-nav .gruppo8:hover main .gruppo8,
-nav .gruppo9:hover main .gruppo9,
-nav .gruppo10:hover main .gruppo10,
-nav .gruppo11:hover main .gruppo11,
-nav .gruppo12:hover main .gruppo12,
-nav .gruppo13:hover main .gruppo13,
-nav .gruppo14:hover main .gruppo14,
-nav .gruppo15:hover main .gruppo15,
-nav .gruppo16:hover main .gruppo16,
-nav .gruppo17:hover main .gruppo17,
-nav .gruppo18:hover main .gruppo18{
-    background-color: gray;
-}
-
-nav .periodo1:hover main .periodo1,
-nav .periodo2:hover main .periodo2,
-nav .periodo3:hover main .periodo3,
-nav .periodo4:hover main .periodo4,
-nav .periodo5:hover main .periodo5,
-nav .periodo6:hover main .periodo6,
-nav .periodo7:hover main .periodo7,
-nav .lantanidi:hover main .lantanidi,
-nav .attinidi:hover main .attinidi{
-    background-color: gray;
+    transition: 0.1s;
 }
