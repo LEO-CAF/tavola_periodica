@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
-
 <head>
-<meta charset="utf-8">
     <title>Tavola Periodica</title>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icona.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
 </head>
-
 <body>
     <nav>
         <ul>
@@ -69,25 +68,24 @@
 
             <li><a>Presentazioni</a>
                 <ul class="contenuto">
-                    <li><a href="presentazioni/presentazione1.html">1° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione2.html">2° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione3.html">3° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione4.html">4° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione5.html">5° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione6.html">6° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione7.html">7° Presentazione</a></li>
-                    <li><a href="presentazioni/presentazione8.html">8° Presentazione</a></li>
+                    <li><a href="presentazione/1.html" target="_blank">1° Presentazione</a></li>
+                    <li><a href="presentazione/2.html" target="_blank">2° Presentazione</a></li>
+                    <li><a href="presentazione/3.html" target="_blank">3° Presentazione</a></li>
+                    <li><a href="presentazione/4.html" target="_blank">4° Presentazione</a></li>
+                    <li><a href="presentazione/5.html" target="_blank">5° Presentazione</a></li>
+                    <li><a href="presentazione/6.html" target="_blank">6° Presentazione</a></li>
+                    <li><a href="presentazione/7.html" target="_blank">7° Presentazione</a></li>
+                    <li><a href="presentazione/8.html" target="_blank">8° Presentazione</a></li>
                 </ul>
             </li>
 
-            
             <li id="classe"><h1>2°E</h1></li>
         </ul>
     </nav>
     
     <main>
         <div id="box">
-            <div class="periodo1 gruppo1 non_metalli" onclick="window.location='';"><span class="simbolo">H</span><span class="nome">Idrogeno</span><span class="numero">1</span></div>
+            <div class="periodo1 gruppo1 non_metalli"><span class="simbolo">H</span><span class="nome">Idrogeno</span><span class="numero">1</span></div>
             <div></div>
             <div></div>
             <div></div>
@@ -104,33 +102,12 @@
             <div></div>
             <div></div>
             <div></div>
-            <div class="periodo1 gruppo18 gas_nobili" onclick="window.location='';"><span class="simbolo">He</span><span class="nome">Elio</span><span class="numero">2</span></div>
-            
-            <br>
-
-            <div class="periodo2 gruppo1 metalli_alcalini" onclick="window.location='';"><span class="simbolo">Li</span><span class="nome">Litio</span><span class="numero">3</span></div>
-            <div class="periodo2 gruppo2 metalli_alcalino_terrosi" onclick="window.location='';"><span class="simbolo">Be</span><span class="nome">Berillio</span><span class="numero">4</span></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="periodo2 gruppo13 semimetalli" onclick="window.location='';"><span class="simbolo">B</span><span class="nome">Boro</span><span class="numero">5</span></div>
-            <div class="periodo2 gruppo14 non_metalli" onclick="window.location='';"><span class="simbolo">C</span><span class="nome">Carbonio</span><span class="numero">6</span></div>
-            <div class="periodo2 gruppo15 non_metalli" onclick="window.location='';"><span class="simbolo">N</span><span class="nome">Azoto</span><span class="numero">7</span></div>
-            <div class="periodo2 gruppo16 non_metalli" onclick="window.location='';"><span class="simbolo">O</span><span class="nome">Ossigeno</span><span class="numero">8</span></div>
-            <div class="periodo2 gruppo17 alogeni" onclick="window.location='';"><span class="simbolo">F</span><span class="nome">Fluoro</span><span class="numero">9</span></div>
-            <div class="periodo2 gruppo18 gas_nobili" onclick="window.location='';"><span class="simbolo">Ne</span><span class="nome">Neon</span><span class="numero">10</span></div>
+            <div class="periodo1 gruppo18 gas_nobili"><span class="simbolo">He</span><span class="nome">Elio</span><span class="numero">2</span></div>
 
             <br>
 
-            <div class="periodo3 gruppo1 metalli_alcalini" onclick="window.location='';"><span class="simbolo">Na</span><span class="nome">Sodio</span><span class="numero">11</span></div>
-            <div class="periodo3 gruppo2 metalli_alcalino_terrosi" onclick="window.location='';"><span class="simbolo">Mg</span><span class="nome">Magnesio</span><span class="numero">12</span></div>
+            <div class="periodo2 gruppo1 metalli_alcalini"><span class="simbolo">Li</span><span class="nome">Litio</span><span class="numero">3</span></div>
+            <div class="periodo2 gruppo2 metalli_alcalino_terrosi"><span class="simbolo">Be</span><span class="nome">Berillio</span><span class="numero">4</span></div>
             <div></div>
             <div></div>
             <div></div>
@@ -141,12 +118,33 @@
             <div></div>
             <div></div>
             <div></div>
-            <div class="periodo3 gruppo13 metalli_del_blocco_p" onclick="window.location='';"><span class="simbolo">Al</span><span class="nome">Alluminio</span><span class="numero">13</span></div>
-            <div class="periodo3 gruppo14 semimetalli" onclick="window.location='';"><span class="simbolo">Si</span><span class="nome">Silicio</span><span class="numero">14</span></div>
-            <div class="periodo3 gruppo15 non_metalli" onclick="window.location='';"><span class="simbolo">P</span><span class="nome">Fosforo</span><span class="numero">15</span></div>
-            <div class="periodo3 gruppo16 non_metalli" onclick="window.location='';"><span class="simbolo">S</span><span class="nome">Zolfo</span><span class="numero">16</span></div>
-            <div class="periodo3 gruppo17 alogeni" onclick="window.location='';"><span class="simbolo">Cl</span><span class="nome">Cloro</span><span class="numero">17</span></div>
-            <div class="periodo3 gruppo18 gas_nobili" onclick="window.location='';"><span class="simbolo">Ar</span><span class="nome">Argon</span><span class="numero">18</span></div>
+            <div class="periodo2 gruppo13 semimetalli"><span class="simbolo">B</span><span class="nome">Boro</span><span class="numero">5</span></div>
+            <div class="periodo2 gruppo14 non_metalli"><span class="simbolo">C</span><span class="nome">Carbonio</span><span class="numero">6</span></div>
+            <div class="periodo2 gruppo15 non_metalli"><span class="simbolo">N</span><span class="nome">Azoto</span><span class="numero">7</span></div>
+            <div class="periodo2 gruppo16 non_metalli"><span class="simbolo">O</span><span class="nome">Ossigeno</span><span class="numero">8</span></div>
+            <div class="periodo2 gruppo17 alogeni"><span class="simbolo">F</span><span class="nome">Fluoro</span><span class="numero">9</span></div>
+            <div class="periodo2 gruppo18 gas_nobili"><span class="simbolo">Ne</span><span class="nome">Neon</span><span class="numero">10</span></div>
+
+            <br>
+
+            <div class="periodo3 gruppo1 metalli_alcalini"><span class="simbolo">Na</span><span class="nome">Sodio</span><span class="numero">11</span></div>
+            <div class="periodo3 gruppo2 metalli_alcalino_terrosi"><span class="simbolo">Mg</span><span class="nome">Magnesio</span><span class="numero">12</span></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="periodo3 gruppo13 metalli_del_blocco_p"><span class="simbolo">Al</span><span class="nome">Alluminio</span><span class="numero">13</span></div>
+            <div class="periodo3 gruppo14 semimetalli"><span class="simbolo">Si</span><span class="nome">Silicio</span><span class="numero">14</span></div>
+            <div class="periodo3 gruppo15 non_metalli"><span class="simbolo">P</span><span class="nome">Fosforo</span><span class="numero">15</span></div>
+            <div class="periodo3 gruppo16 non_metalli"><span class="simbolo">S</span><span class="nome">Zolfo</span><span class="numero">16</span></div>
+            <div class="periodo3 gruppo17 alogeni"><span class="simbolo">Cl</span><span class="nome">Cloro</span><span class="numero">17</span></div>
+            <div class="periodo3 gruppo18 gas_nobili"><span class="simbolo">Ar</span><span class="nome">Argon</span><span class="numero">18</span></div>
 
             <br>
 
@@ -280,6 +278,7 @@
         <h4>MADE BY <h3>Leonardo Cafissi</h3> & <h3>Davide Guidi</h3>
         </h4>
     </footer>
+    
+    <script type="text/javascript" src="script.js"></script>
 </body>
-
 </html>

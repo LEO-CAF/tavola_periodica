@@ -8,10 +8,10 @@
 
 /* font */
 
-h1{font-size: 400%}
-h2{font-size: 300%}
-h3{font-size: 200%}
-h4{font-size: 100%}
+h1{font-size: 350%}
+h2{font-size: 250%}
+h3{font-size: 150%}
+h4{font-size: 75%}
 
 *{font-family: 'Ubuntu', sans-serif;}
 
@@ -35,6 +35,7 @@ nav{
 nav #titolo, nav #classe{
     color: white;
     width: 20%;
+    line-height: 33px;
 }
 
 nav ul{
@@ -123,7 +124,7 @@ main #box{
 /* celle */
 
 main div:not(#box){
-    width: calc(100vw/30);
+    width: calc(100vw/25);
     aspect-ratio: 1/1;
 
     display: inline-block;
@@ -191,19 +192,24 @@ footer h3, footer h4{
     display: inline-block;
 }
 
-/* ANIMAZIONI */
+/* MOBILE */
 
-main .metalli_alcalini:hover,
-main .metalli_alcalino_terrosi:hover,
-main .metalli_del_blocco_d:hover,
-main .metalli_del_blocco_p:hover,
-main .lantanidi:hover,
-main .attinidi:hover,
-main .semimetalli:hover,
-main .non_metalli:hover,
-main .alogeni:hover,
-main .gas_nobili:hover,
-main .altro:hover{
-    border: 5px solid yellow;
-    transition: 0.1s;
+@media all and (max-width: 1500px){
+    main .simbolo{font-size: 120%;}
+    
+    main .nome{font-size: 60%;}
+    
+    main .numero{font-size: 120%;}
+
+    main div:not(#box){width: 40px;}
+}
+
+@media all and (max-width: 1000px){
+    main .simbolo{font-size: 80%;}
+    
+    main .nome{font-size: 40%;}
+    
+    main .numero{font-size: 80%;}
+
+    main div:not(#box){width: 30px;}
 }
