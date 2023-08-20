@@ -38,6 +38,11 @@ nav #titolo, nav #classe{
     line-height: 33px;
 }
 
+nav #logo img{
+    height: 60px;
+    border-radius: 3px;
+}
+
 nav ul{
     list-style: none;
     width: 100%;
@@ -190,6 +195,23 @@ footer{
 
 footer h3, footer h4{
     display: inline-block;
+}
+
+/* ANIMAZIONI */
+
+main .metalli_alcalini:hover,
+main .metalli_alcalino_terrosi:hover,
+main .metalli_del_blocco_d:hover,
+main .metalli_del_blocco_p:hover,
+main .semimetalli:hover,
+main .non_metalli:hover,
+main .alogeni:hover,
+main .gas_nobili:hover,
+main .altro:hover,
+main .lantanidi:hover,
+main .attinidi:hover{
+    border: 5px solid yellow;
+    transition: 0.1s;
 }
 
 /* MOBILE */

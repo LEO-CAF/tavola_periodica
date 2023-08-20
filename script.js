@@ -36,15 +36,15 @@ for(let i of items2){
     );
 }
 
-$("main div:not(#box)").hover(
-    function(){
-        $("main ."+i).css("border", "5px solid yellow");
-        $("main ."+i).css("transition", "0.1s");
-    },
-    function(){
-        $("main ."+i).css("border", "0 solid yellow");
-    }
-);
+// $("main div:not(#box)").hover(
+//     function(){
+//         $("main ."+i).css("border", "5px solid yellow");
+//         $("main ."+i).css("transition", "0.1s");
+//     },
+//     function(){
+//         $("main ."+i).css("border", "0 solid yellow");
+//     }
+// );
 
 $("main div:not(#box)").click(
     function(){
@@ -72,5 +72,11 @@ $("main div:not(#box)").click(
         if($(this).hasClass("lantanidi") || $(this).hasClass("attinidi")){
             window.open("presentazione/8.html");
         }
+    }
+);
+
+$("nav #logo").click(
+    function(){
+        window.open("https://www.antoniopesenti.edu.it/")
     }
 );
