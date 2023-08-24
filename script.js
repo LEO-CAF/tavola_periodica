@@ -1,52 +1,72 @@
+/* ------------------------------ GRUPPI ------------------------------ */
+
 for(let i=1; i<=18; i++){
     $("nav .gruppo"+i).hover(
         function(){
-            $("main .gruppo"+i).css("border", "5px solid yellow");
-            $("main .gruppo"+i).css("transition", "0.1s");
+            $("main").addClass("highlighting-group");
+            $("main .gruppo"+i).addClass("element-group-highlight");
         },
         function(){
-            $("main .gruppo"+i).css("border", "0 solid yellow");
+            $("main .gruppo"+i).removeClass("element-group-highlight");
+            $("main").removeClass("highlighting-group");
         }
     );
 }
+
+
+
+/* ------------------------------ PERIODI ------------------------------ */
 
 let items1=["periodo1", "periodo2", "periodo3", "periodo4", "periodo5", "periodo6", "periodo7", "lantanidi", "attinidi"];
 for(let i of items1){
     $("nav ."+i).hover(
         function(){
-            $("main ."+i).css("border", "5px solid yellow");
-            $("main ."+i).css("transition", "0.1s");
+            $("main").addClass("highlighting-group");
+            $("main ."+i).addClass("element-group-highlight");
         },
         function(){
-            $("main ."+i).css("border", "0 solid yellow");
+            $("main ."+i).removeClass("element-group-highlight");
+            $("main").removeClass("highlighting-group");
         }
     );
 }
+
+
+
+/* ------------------------------ CATEGORIE ------------------------------ */
 
 let items2=["metalli_alcalini", "metalli_alcalino_terrosi", "metalli_del_blocco_d", "metalli_del_blocco_p", "lantanidi", "attinidi", "semimetalli", "non_metalli", "alogeni", "gas_nobili", "altro"];
 for(let i of items2){
     $("nav ."+i).hover(
         function(){
-            $("main ."+i).css("border", "5px solid yellow");
-            $("main ."+i).css("transition", "0.1s");
+            $("main").addClass("highlighting-group");
+            $("main ."+i).addClass("element-group-highlight");
         },
         function(){
-            $("main ."+i).css("border", "0 solid yellow");
+            $("main ."+i).removeClass("element-group-highlight");
+            $("main").removeClass("highlighting-group");
         }
     );
 }
 
-// $("main div:not(#box)").hover(
-//     function(){
-//         $("main ."+i).css("border", "5px solid yellow");
-//         $("main ."+i).css("transition", "0.1s");
-//     },
-//     function(){
-//         $("main ."+i).css("border", "0 solid yellow");
-//     }
-// );
 
-$("main div:not(#box)").click(
+
+/* ------------------------------ CELLE ------------------------------ */
+
+$("main #box div").hover(
+    function(){
+        $(this).addClass("element-highlight");
+    },
+    function(){
+        $(this).removeClass("element-highlight");
+    }
+);
+
+
+
+/* ------------------------------ PRESENTAZIONI ------------------------------ */
+
+$("main #box div").click(
     function(){
         if($(this).hasClass("metalli_alcalini") || $(this).hasClass("metalli_alcalino_terrosi")){
             window.open("presentazione/1.html");
@@ -75,8 +95,22 @@ $("main div:not(#box)").click(
     }
 );
 
+
+
+/* ------------------------------ LOGO ------------------------------ */
+
 $("nav #logo").click(
     function(){
         window.open("https://www.antoniopesenti.edu.it/")
+    }
+);
+
+
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+$("footer").click(
+    function(){
+        window.open("https://github.com/LEO-CAF/tavola_periodica")
     }
 );

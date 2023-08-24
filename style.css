@@ -1,21 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap");
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
 }
 
-/* font */
 
-h1{font-size: 350%}
-h2{font-size: 250%}
-h3{font-size: 150%}
-h4{font-size: 75%}
 
-*{font-family: 'Ubuntu', sans-serif;}
-
-/* NAVBAR */
+/* ------------------------------ NAVBAR ------------------------------ */
 
 nav{
     position: fixed;
@@ -82,7 +76,7 @@ nav ul li a{
     display: block;
     text-decoration: none;
     color: white;
-    padding: 15px 10px;
+    padding: 5px 15px;
     font-size: 1.2em;
     border-right: solid 2px black;
     border-left: solid 2px black;
@@ -109,10 +103,12 @@ nav ul li li:hover a{
     color: white;
 }
 
-/* MAIN */
+
+
+/* ------------------------------ MAIN ------------------------------ */
 
 main{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 
     display: flex;
@@ -121,20 +117,20 @@ main{
 }
 
 main #box{
-    max-width: 90%;
-    max-height: 90%;
-    display: inline-block;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    max-height: calc(100vh - 120px);
+
+    display: block;
 }
 
-/* celle */
-
-main div:not(#box){
-    width: calc(100vw/25);
+main #box div{
+    width: min(100vw/21, (100vh - 120px)/10);
     aspect-ratio: 1/1;
 
     display: inline-block;
     position: relative;
-    margin: 2px;
+    /* margin: 2px; */
 }
 
 main span{
@@ -145,38 +141,26 @@ main .simbolo{
     position: absolute;
     left: 0;
 
-    font-size: 150%;
+    font-weight: bolder;
 }
 
 main .nome{
     position: absolute;
     bottom: 0;
 
-    font-size: 100%;
+    font-weight: lighter;
 }
 
 main .numero{
     position: absolute;
     right: 0;
 
-    font-size: 150%;
+    font-weight: lighter;
 }
 
-/* colori */
 
-main .metalli_alcalini{background-color: rgb(202,107,24)}
-main .metalli_alcalino_terrosi{background-color: rgb(255,237,188)}
-main .metalli_del_blocco_d{background-color: rgb(225,202,200)}
-main .metalli_del_blocco_p{background-color: rgb(125,147,58)}
-main .lantanidi{background-color: rgb(232,181,33)}
-main .attinidi{background-color: rgb(139,162,174)}
-main .semimetalli{background-color: rgb(144,170,36)}
-main .non_metalli{background-color: rgb(173,178,147)}
-main .alogeni{background-color: rgb(188,184,145)}
-main .gas_nobili{background-color: rgb(173,204,220)}
-main .altro{background-color: rgb(229,229,229)}
 
-/* FOOTER */
+/* ------------------------------ FOOTER ------------------------------ */
 
 footer{
     position: fixed;
@@ -197,41 +181,137 @@ footer h3, footer h4{
     display: inline-block;
 }
 
-/* ANIMAZIONI */
 
-main .metalli_alcalini:hover,
-main .metalli_alcalino_terrosi:hover,
-main .metalli_del_blocco_d:hover,
-main .metalli_del_blocco_p:hover,
-main .semimetalli:hover,
-main .non_metalli:hover,
-main .alogeni:hover,
-main .gas_nobili:hover,
-main .altro:hover,
-main .lantanidi:hover,
-main .attinidi:hover{
-    border: 5px solid yellow;
-    transition: 0.1s;
+
+/* ------------------------------ COLORI ------------------------------ */
+
+main .metalli_alcalini{background-color: rgb(202,107,24)}
+main .metalli_alcalino_terrosi{background-color: rgb(255,237,188)}
+main .metalli_del_blocco_d{background-color: rgb(225,202,200)}
+main .metalli_del_blocco_p{background-color: rgb(125,147,58)}
+main .lantanidi{background-color: rgb(232,181,33)}
+main .attinidi{background-color: rgb(139,162,174)}
+main .semimetalli{background-color: rgb(144,170,36)}
+main .non_metalli{background-color: rgb(173,178,147)}
+main .alogeni{background-color: rgb(188,184,145)}
+main .gas_nobili{background-color: rgb(173,204,220)}
+main .altro{background-color: rgb(229,229,229)}
+
+
+
+/* ------------------------------ ANIMAZIONI ------------------------------ */
+
+main #box div{
+    transition:
+        opacity 0.4s ease-in-out,
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+    opacity: 1;
 }
 
-/* MOBILE */
+main.highlighting-group #box div{
+    opacity: 0.4;
+}
 
-@media all and (max-width: 1500px){
+.element-group-highlight{
+    transition: opacity 0.01s !important;
+    opacity: 1 !important;
+    outline: 2px solid black;
+    border-radius: 1px;
+}
+
+.periodo1.element-highlight,
+.periodo2.element-highlight,
+.periodo3.element-highlight,
+.periodo4.element-highlight,
+.periodo5.element-highlight,
+.periodo6.element-highlight,
+.periodo7.element-highlight,
+.periodo8.element-highlight,
+.lantanidi.element-highlight,
+.attinidi.element-highlight{
+    outline: 4px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: black 0px 0px 20px;
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+
+
+/* ------------------------------ FONT ------------------------------ */
+
+h1{font-size: 325%}
+h2{font-size: 275%}
+h3{font-size: 150%}
+h4{font-size: 100%}
+
+main .simbolo{font-size: 180%;}
+main .nome{font-size: 98%;}
+main .numero{font-size: 160%;}
+
+@media (max-width: 2000px) or (max-height: 1200px){
+    h1{font-size: 300%}
+    h2{font-size: 250%}
+    h3{font-size: 140%}
+    h4{font-size: 90%}
+    
+    main .simbolo{font-size: 165%;}
+    main .nome{font-size: 86%;}
+    main .numero{font-size: 145%;}
+
+    /* body{background-color: red;} */
+}
+
+@media (max-width: 1750px) or (max-height: 1000px){
+    h1{font-size: 275%}
+    h2{font-size: 225%}
+    h3{font-size: 130%}
+    h4{font-size: 80%}
+    
+    main .simbolo{font-size: 150%;}
+    main .nome{font-size: 74%;}
+    main .numero{font-size: 130%;}
+
+    /* body{background-color: orange;} */
+}
+
+@media (max-width: 1500px) or (max-height: 800px){
+    h1{font-size: 250%}
+    h2{font-size: 200%}
+    h3{font-size: 120%}
+    h4{font-size: 70%}
+
+    main .simbolo{font-size: 135%;}
+    main .nome{font-size: 61%;}
+    main .numero{font-size: 115%;}
+
+    /* body{background-color: yellow;} */
+}
+
+@media (max-width: 1250px) or (max-height: 600px){
+    h1{font-size: 225%}
+    h2{font-size: 175%}
+    h3{font-size: 110%}
+    h4{font-size: 60%}
+
     main .simbolo{font-size: 120%;}
-    
-    main .nome{font-size: 60%;}
-    
-    main .numero{font-size: 120%;}
+    main .nome{font-size: 52%;}
+    main .numero{font-size: 100%;}
 
-    main div:not(#box){width: 40px;}
+    /* body{background-color: blue;} */
 }
 
-@media all and (max-width: 1000px){
-    main .simbolo{font-size: 80%;}
-    
-    main .nome{font-size: 40%;}
-    
-    main .numero{font-size: 80%;}
+@media (max-width: 1000px) or (max-height: 400px){
+    h1{font-size: 200%}
+    h2{font-size: 150%}
+    h3{font-size: 100%}
+    h4{font-size: 50%}
 
-    main div:not(#box){width: 30px;}
+    main .simbolo{font-size: 105%;}
+    main .nome{font-size: 44%;}
+    main .numero{font-size: 85%;}
+
+    /* body{background-color: green;} */
 }
